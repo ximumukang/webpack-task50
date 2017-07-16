@@ -1,0 +1,112 @@
+@import "../common/commonStyle.css";
+
+
+hr{
+  margin-bottom: 30px;
+}
+
+#question-list ul{
+  height: 40px;
+  opacity: 0;
+}
+#question-list .question-option{
+  padding: .5em;
+}
+#question-list .question-option:hover {
+  background: rgb(254, 241, 232);
+}
+#question-list div:hover>ul{
+  opacity: 1;
+}
+
+#question-list div:nth-child(1) .go-up{
+  display: none;
+}
+#question-list div:nth-last-child(1) .go-down{
+  display: none;
+}
+#question-list li{
+  float: right;
+  margin-right: 5px;
+}
+
+.remove-option{
+  margin-left: 10px;
+  font-size: 14px;
+  opacity: 0;
+  cursor: pointer;
+  text-indent: 0;
+}
+
+p:hover>.remove-option{
+  opacity: 1;
+  color: #ee7419;
+}
+#question-list .add-option{
+  cursor: pointer;
+  text-align: center;
+  border: 1px dotted grey;
+  padding: 2px 0;
+  opacity: 0;
+}
+#question-list .add-option:hover{
+  opacity: 1;
+}
+#question-list ul li
+{
+  cursor: pointer;
+}
+#question-type{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  height: 80px;
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #7d7d7d;
+}
+
+#question-type button{
+  width:25%;
+  margin-top: 20px;
+  height: 40px;
+}
+
+#add-question {
+  cursor: pointer;
+  width: 90%;
+  margin: 0 auto 1.5em;
+  text-align: center;
+  line-height: 80px;
+  border: 1px solid #7d7d7d;
+  background: #dadada;
+}
+
+#my-calender{
+  display: flex;
+  flex-flow: row wrap;
+  width: 90%;
+  line-height: 1.5em;
+  margin:30px auto;
+  justify-content: space-around;
+}
+#date-group {
+  text-align: center;
+}
+#mydatepicker {
+  margin-bottom: 0.5em;
+}
+
+#button-group button{
+  padding: 4px 10px;
+}
+
+.input-edit{
+  width: 50%;
+  height: 30px;
+  text-align: center;
+}
+#question-list .input-edit{
+  text-align: left;
+  height: 1.5em;
+}
