@@ -128,13 +128,13 @@ const config ={
             template: path.resolve(TEM_PATH,'index.html'),
             filename: 'index.html',
             //chunks这个参数告诉插件要引用entry里面的那几入口
-            chunks:['index','vendors'],
+            chunks:['vendors','index'],
             //要把script插入到标签里
             inject: 'body'
 		}),
 		new HtmlwebpackPlugin({
             title:'问卷系统--编辑页',
-            template: path.resolve(TEM_PATH,'editQuestionnaire.html'),
+            template: path.resolve(TEM_PATH,'index.html'),
             filename: 'editQuestionnaire.html',
             //chunks这个参数告诉插件要引用entry里面的那几入口
             chunks:['editQuestionnaire','vendors'],
@@ -143,23 +143,23 @@ const config ={
 		}),
         new HtmlwebpackPlugin({
             title:'问卷系统--修改保存页',
-            template: path.resolve(TEM_PATH,'editQuestionnaire.html'),
+            template: path.resolve(TEM_PATH,'index.html'),
             filename: 'savedQuestionnaire.html',
-            chunks:['savedQuestionnaire','vendors'],
+            chunks:['vendors','savedQuestionnaire'],
             inject: 'body'
         }),
         new HtmlwebpackPlugin({
             title:'问卷系统--填写问卷页',
-            template: path.resolve(TEM_PATH,'fillQuestionnaire.html'),
+            template: path.resolve(TEM_PATH,'index.html'),
             filename: 'fillQuestionnaire.html',
-            chunks:['fillQuestionnaire','vendors'],
+            chunks:['vendors','fillQuestionnaire'],
             inject: 'body'
         }),
         new HtmlwebpackPlugin({
             title:'问卷系统--查看数据页',
-            template: path.resolve(TEM_PATH,'viewData.html'),
+            template: path.resolve(TEM_PATH,'index.html'),
             filename: 'viewData.html',
-            chunks:['viewData','vendors'],
+            chunks:['vendors','viewData'],
             inject: 'body'
         }),
 		new UglifyJSPlugin({

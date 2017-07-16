@@ -4,6 +4,10 @@
 import $ from 'jquery';
 import '../css/viewData/style.scss';
 $(function () {
+    //渲染出初始的元素
+    let html = '<div id="container"><h1 id="creatTitle" class="creatTitle"></h1><hr /> <div id="question-list"></div><hr /><button id="return-btn">返回</button></div>'
+    $(html).appendTo($("main"));
+
     //点击返回
     $("#return-btn").click(function () {
         window.history.back();

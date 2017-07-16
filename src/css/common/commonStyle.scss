@@ -1,0 +1,138 @@
+@import './reset.scss';
+
+$primaryColor: #ee7419;
+$btnBgColor: white;
+$boxShadow: 0 .05em .25em rgba(0,0,0,.5);
+$boxRadius: .2em;
+$aColor: white;
+
+body {
+    font: 16px/1.5em Microsoft YaHei,Tahoma,Helvetica,Arial,\\5B8B\4F53,sans-serif;
+    color: rgb(85, 85, 85);
+    position: relative;
+    z-index: 1;
+    background: #dadada;
+
+    button {
+        cursor: pointer;
+        border-radius: $boxRadius;
+        background-color: $btnBgColor;
+        box-shadow: $boxShadow;
+    }
+    a {
+         text-align: center;
+         color: $aColor;
+     }
+    header {
+        height: 50px;
+        margin: 0 auto;
+        background: $primaryColor;
+        h1 {
+            font-size: 18px;
+            line-height: 50px;
+            float: left;
+            margin-left: 12.5% ;
+            color: white;
+            text-shadow: 0 -.05em .05em rgba(0,0,0,.5);
+        }
+        #survey-system {
+
+            span {
+                width: 18px;
+                height: 18px;
+                display: inline-block;
+                content: '?';
+                line-height: 18px;
+                margin-top: 16px;
+                color: $primaryColor;
+                border-radius: 9px;
+                background: white;
+                text-align: center;
+            }
+        }
+        #my-survey {
+            margin-left: 5%;
+            padding: 0 10px;
+            cursor: pointer;
+            a {
+                font-size: 18px;
+                line-height: 50px;
+                &:hover {
+                    background: #ee7419 linear-gradient(transparent,hsla(0,0%,100%,.1));
+                }
+            }
+        }
+    }
+
+    #container {
+        font-size: 16px;
+        position: relative;
+        width: 90%;
+        min-height: 300px;
+        margin: 25px auto;
+        padding: 1em 1em 2.5em;
+        border-radius: .2em;
+        background: #fff;
+        box-shadow: 0 .05em .25em rgba(0,0,0,.5);
+        hr {
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 20px;
+            min-height: 1.5em;
+            margin: 20px auto;
+            text-align: center;
+            &:hover {
+                background: rgb(254, 241, 232);
+            }
+        }
+        button{
+            &:hover {
+                color: white;
+                background: #ee7419;
+            }
+            a {
+                color: rgb(85, 85, 85);
+            }
+        }
+        #question-list {
+            line-height: 1.5em;
+            width: 90%;
+            min-height: 1px;
+            margin: 0 auto;
+            padding-bottom: 1.5em ;
+            .question-option {
+                padding: .5em;
+                &:hover {
+                    background: rgb(254, 241, 232);
+                }
+                h3 {
+                    line-height: 1.5em;
+                    &:hover {
+                        font-weight: bold !important;
+                    }
+                }
+            }
+            p {
+                font-size: 14px;
+                text-indent: 1em;
+            }
+            textarea {
+                width: 90%;
+                margin-left: 2em;
+            }
+        }
+    }
+}
+
+@mixin min-screen ($res){
+    @media only screen and (min-width: $res){
+        @content;
+    }
+}
+@include min-screen(798px) {
+    #container {
+        width: 75%;
+        margin: 50px auto;
+    }
+}

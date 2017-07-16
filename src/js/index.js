@@ -3,7 +3,15 @@ import { Modal } from './Modal.js';
 import $ from 'jquery';
 
 $(function () {
-    var submitQues=localStorage.submitQues ? JSON.parse(localStorage.submitQues):[],
+    //渲染初始的元素
+    let html='<div id="container"> ' +
+        '<a id="build" href="editQuestionnaire.html">新建问卷</a> ' +
+        '<table><tr><th>标题</th><th>时间</th><th>状态</th>' +
+        '<th>操作 <button class="build-new"><a href="editQuestionnaire.html">新建问卷</a></button></th></tr>' +
+        '</table></div>';
+    $(html).appendTo($('main'));
+
+    let submitQues=localStorage.submitQues ? JSON.parse(localStorage.submitQues):[],
         savedQuestionnaire=localStorage.savedQuestionnaire ? JSON.parse(localStorage.savedQuestionnaire) : [],
         $table=$("table"),
         currTime;

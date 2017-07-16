@@ -31,8 +31,8 @@ import "../css/common/datepicker.scss";
 
             let tpl= '<div class="date-picker">'
                 +'<div class="date-title">'
-                + '<h1 class="month"></h1>'
-                +'<h2 class="year"></h2>'
+                +'<h1 class="month"></h1>'
+                +'<h1 class="year"></h1>'
                 +'<a class="prev"> < </a>'
                 +'<a class="next"> > </a>'
                 +'</div>'

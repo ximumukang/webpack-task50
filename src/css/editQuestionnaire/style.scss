@@ -1,61 +1,62 @@
-@import "../common/commonStyle.css";
+@import "../common/awesome/css/font-awesome.min.css";
+@import "../common/commonStyle";
 
 
 hr{
   margin-bottom: 30px;
 }
 
-#question-list ul{
-  height: 40px;
-  opacity: 0;
-}
-#question-list .question-option{
-  padding: .5em;
-}
-#question-list .question-option:hover {
-  background: rgb(254, 241, 232);
-}
-#question-list div:hover>ul{
-  opacity: 1;
+#question-list {
+  ul{
+    height: 40px;
+    opacity: 0;
+    li{
+      float: right;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+  }
+  .question-option{
+    padding: .5em;
+    &:hover {
+      background: rgb(254, 241, 232);
+    }
+    .remove-option{
+      margin-left: 10px;
+      font-size: 14px;
+      opacity: 0;
+      cursor: pointer;
+      text-indent: 0;
+    }
+  }
+  div {
+    &:hover>ul{
+      opacity: 1;
+    }
+    &:nth-child(1) .go-up{
+      display: none;
+    }
+    &:nth-last-child(1) .go-down{
+       display: none;
+     }
+  }
+  p:hover>.remove-option{
+    opacity: 1;
+    color: #ee7419;
+  }
+  .add-option{
+    cursor: pointer;
+    text-align: center;
+    border: 1px dotted grey;
+    padding: 2px 0;
+    opacity: 0;
+    &:hover{
+      opacity: 1;
+    }
+  }
+
 }
 
-#question-list div:nth-child(1) .go-up{
-  display: none;
-}
-#question-list div:nth-last-child(1) .go-down{
-  display: none;
-}
-#question-list li{
-  float: right;
-  margin-right: 5px;
-}
-
-.remove-option{
-  margin-left: 10px;
-  font-size: 14px;
-  opacity: 0;
-  cursor: pointer;
-  text-indent: 0;
-}
-
-p:hover>.remove-option{
-  opacity: 1;
-  color: #ee7419;
-}
-#question-list .add-option{
-  cursor: pointer;
-  text-align: center;
-  border: 1px dotted grey;
-  padding: 2px 0;
-  opacity: 0;
-}
-#question-list .add-option:hover{
-  opacity: 1;
-}
-#question-list ul li
-{
-  cursor: pointer;
-}
 #question-type{
   display: flex;
   flex-flow: row;
@@ -64,14 +65,12 @@ p:hover>.remove-option{
   width: 90%;
   margin: 0 auto;
   border: 1px solid #7d7d7d;
+  button{
+    width:25%;
+    margin-top: 20px;
+    height: 40px;
+  }
 }
-
-#question-type button{
-  width:25%;
-  margin-top: 20px;
-  height: 40px;
-}
-
 #add-question {
   cursor: pointer;
   width: 90%;
@@ -90,11 +89,11 @@ p:hover>.remove-option{
   margin:30px auto;
   justify-content: space-around;
 }
+#mydatepicker {
+   margin-bottom: 0.5em;
+ }
 #date-group {
   text-align: center;
-}
-#mydatepicker {
-  margin-bottom: 0.5em;
 }
 
 #button-group button{

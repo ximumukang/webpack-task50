@@ -5,6 +5,23 @@ import $ from 'jquery';
 import { Modal } from './modal.js';
 
 export function init() {
+    //渲染初始元素
+        let html = '<div id="container">' +
+            '<div id="wenjuan">' +
+            '<h1 id="creatTitle" class="creatTitle">这里是标题</h1><hr />' +
+            '<div id="question-list"></div></div>' +
+            '<div id="question-type">' +
+            '<button id="audio-type"><i class="icon-circle-blank icon-large"></i> 单选</button>' +
+            '<button id="checkbox-type"><i class="icon-check-empty icon-large"></i> 多选</button>' +
+            '<button id="text-type"><i class="icon-book icon-large"></i> 文本</button></div>' +
+            '<div id="add-question"><i class="icon-plus icon-large"></i> 添加问题</div><hr/>' +
+            '<div id="my-calender">' +
+            '<span id="date-group">' +
+            '<label id="date" for="mydatepicker">问卷截止日期</label> &nbsp;<input id="mydatepicker" type="text" name="mydatepicker" />' +
+            '</span>' +
+            '<span id="button-group"> <button id="save-question">保存问卷</button>&nbsp;&nbsp;&nbsp; <button id="submit-question">发布问卷</button> </span>' +
+            ' </div></div>';
+        $(html).appendTo($("main"));
 
         $("#question-type").hide();
         $("#add-question").click(function () {
