@@ -5,6 +5,11 @@ $btnBgColor: white;
 $boxShadow: 0 .05em .25em rgba(0,0,0,.5);
 $boxRadius: .2em;
 $aColor: white;
+@mixin min-screen ($res){
+    @media only screen and (min-width: $res){
+        @content;
+    }
+}
 
 body {
     font: 16px/1.5em Microsoft YaHei,Tahoma,Helvetica,Arial,\\5B8B\4F53,sans-serif;
@@ -31,9 +36,14 @@ body {
             font-size: 18px;
             line-height: 50px;
             float: left;
-            margin-left: 12.5% ;
+            margin-left: 5%;
             color: white;
             text-shadow: 0 -.05em .05em rgba(0,0,0,.5);
+        }
+        @include min-screen(798px){
+            h1 {
+                margin-left: 12.5% ;
+            }
         }
         #survey-system {
 
@@ -105,7 +115,11 @@ body {
                 padding: .5em;
                 &:hover {
                     background: rgb(254, 241, 232);
+                    .add-option {
+                        opacity: 1;
+                    }
                 }
+
                 h3 {
                     line-height: 1.5em;
                     &:hover {
@@ -123,16 +137,12 @@ body {
             }
         }
     }
+    @include min-screen(798px) {
+          #container {
+             width: 75%;
+             margin: 50px auto;
+         }
+    }
 }
 
-@mixin min-screen ($res){
-    @media only screen and (min-width: $res){
-        @content;
-    }
-}
-@include min-screen(798px) {
-    #container {
-        width: 75%;
-        margin: 50px auto;
-    }
-}
+

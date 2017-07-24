@@ -5,8 +5,16 @@
 hr{
   margin-bottom: 30px;
 }
-
+.input-edit{
+  width: 50%;
+  height: 30px;
+  text-align: center;
+}
 #question-list {
+  .input-edit{
+    text-align: left;
+    height: 1.5em;
+  }
   ul{
     height: 40px;
     opacity: 0;
@@ -48,7 +56,6 @@ hr{
     cursor: pointer;
     text-align: center;
     border: 1px dotted grey;
-    padding: 2px 0;
     opacity: 0;
     &:hover{
       opacity: 1;
@@ -88,24 +95,13 @@ hr{
   line-height: 1.5em;
   margin:30px auto;
   justify-content: space-around;
-}
-#mydatepicker {
-   margin-bottom: 0.5em;
- }
-#date-group {
-  text-align: center;
-}
-
-#button-group button{
-  padding: 4px 10px;
-}
-
-.input-edit{
-  width: 50%;
-  height: 30px;
-  text-align: center;
-}
-#question-list .input-edit{
-  text-align: left;
-  height: 1.5em;
+  #date-group {
+    text-align: center;
+    #mydatepicker {
+      margin-bottom: 0.5em;
+    }
+  }
+  #button-group button{
+    padding: 4px 10px;
+  }
 }

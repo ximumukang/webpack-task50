@@ -13,10 +13,6 @@ Modal.prototype={
 
     init:function () {
 
-        if($(".modal").length > 0){
-            return
-        }
-
         let tpl  =  '<div class="modal">' +
                         '<div class="modal-dialog">' +
                             '<div class="modal-content">' +

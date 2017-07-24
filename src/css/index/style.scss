@@ -54,6 +54,9 @@ table{
     width: 6em;
     padding: 3px;
     margin-left: 1em;
+    &:hover >a{
+      color:white !important;
+    }
     a{
       display: block;
       width: 100%;

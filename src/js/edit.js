@@ -17,7 +17,7 @@ export function init() {
             '<div id="add-question"><i class="icon-plus icon-large"></i> 添加问题</div><hr/>' +
             '<div id="my-calender">' +
             '<span id="date-group">' +
-            '<label id="date" for="mydatepicker">问卷截止日期</label> &nbsp;<input id="mydatepicker" type="text" name="mydatepicker" />' +
+            '<label id="date" for="mydatepicker">问卷截止日期</label> &nbsp;<input readonly id="mydatepicker" type="text" name="mydatepicker" />' +
             '</span>' +
             '<span id="button-group"> <button id="save-question">保存问卷</button>&nbsp;&nbsp;&nbsp; <button id="submit-question">发布问卷</button> </span>' +
             ' </div></div>';
@@ -35,7 +35,7 @@ export function init() {
                 "<P><i class='icon-circle-blank'></i><span class='editable'> 选项1</span> <i class='icon-trash remove-option'></i></P>" +
                 "<P><i class='icon-circle-blank'></i><span class='editable'> 选项2</span> <i class='icon-trash remove-option'></i></P>" +
                 "<P><i class='icon-circle-blank'></i><span class='editable'> 选项3</span> <i class='icon-trash remove-option'></i></P>" +
-                "<p class='add-option add-audio-option'><i class='icon-plus icon-large'></i></p>" +
+                "<p class='add-option add-audio-option'><i class='icon-plus'></i></p>" +
                 "<ul><li class='delete-question'>删除</li>" +
                 "<li class='clone-question'>复用</li>" +
                 "<li class='go-down'>下移</li>" +
@@ -52,7 +52,7 @@ export function init() {
                 "<P><i class='icon-check-empty'></i><span class='editable'> 选项1</span> <i class='icon-trash remove-option'></i></P>" +
                 "<P><i class='icon-check-empty'></i><span class='editable'> 选项2</span> <i class='icon-trash remove-option'></i></P>" +
                 "<P><i class='icon-check-empty'></i><span class='editable'> 选项3</span> <i class='icon-trash remove-option'></i></P>" +
-                "<p class='add-option add-check-option'><i class='icon-plus icon-large'></i></p>" +
+                "<p class='add-option add-check-option'><i class='icon-plus'></i></p>" +
                 "<ul><li class='delete-question'>删除</li>" +
                 "<li class='clone-question'>复用</li>" +
                 "<li class='go-down'>下移</li>" +

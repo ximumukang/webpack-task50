@@ -6,11 +6,13 @@ import $ from 'jquery';
 import { Modal} from './modal.js';
 $(function () {
     //渲染出初始的元素
-    let html = '<div id="container">' +
-                    '<h1 id="creatTitle" class="creatTitle"></h1><hr />' +
-                    '<div id="question-list"></div><hr />' +
-                    '<button id="submit-questionnaire">提交问卷</button>' +
-                '</div>';
+    let html = '\
+                <div id="container">\
+                    <h1 id="creatTitle" class="creatTitle"></h1><hr />\
+                   <div id="question-list"></div><hr />\
+                    <button id="submit-questionnaire">提交问卷</button>\
+                </div>\
+                ';
     $(html).appendTo($("main"));
 
     let submitQues=JSON.parse(localStorage.submitQues),

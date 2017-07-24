@@ -179,7 +179,7 @@ const config ={
                 reduce_vars:true
             }
 		}),
-        //new ExtractTextPlugin("style.css"),
+        new ExtractTextPlugin("style.css"),
 
         //在每次构建前清理 /dist 文件夹
         //new CleanWebpackPlugin(['dist']),

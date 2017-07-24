@@ -23,7 +23,7 @@ $(function () {
     }
     // 渲染出保存了的问卷
     function initSavedQues() {
-        for(var a=0,len=savedQuestionnaire.length;a<len;a++){
+        for(let a=0,len=savedQuestionnaire.length;a<len;a++){
             var $tr=$("<tr class='tr'></tr>");
             $("<td></td>").text(savedQuestionnaire[a].title).appendTo($tr);
             $("<td></td>").text(savedQuestionnaire[a].date).appendTo($tr);
@@ -38,8 +38,8 @@ $(function () {
     }
     //渲染出发布了的问卷
     function initSubmitQues() {
-        for(var thisIndex in submitQues){
-            var $tr=$("<tr class='tr'></tr>"),
+        for(let thisIndex in submitQues){
+            let $tr=$("<tr class='tr'></tr>"),
                 aSubmitQues=submitQues[thisIndex];
             $("<td></td>").text(aSubmitQues.title).appendTo($tr);
             $("<td></td>").text(aSubmitQues.date).appendTo($tr);

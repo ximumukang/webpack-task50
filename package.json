@@ -1,7 +1,7 @@
 {
   "name": "webpack-task50",
   "version": "1.0.0",
-  "description": "该项目是自学前端2个半月后，开始做的。那时正好学完jQuery，看了一半的高程。",
+  "description": "",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
