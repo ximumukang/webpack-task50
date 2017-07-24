@@ -1,6 +1,12 @@
 ## 百度前端技术学院2016年task50,-问卷系统
-
-
+### 使用
+  ```
+  git clone https://github.com/ximumukang/webpack-task50.git
+  cd webpack-task50
+  npm install
+  npm run start/build
+  ```
+---
 该项目是自学前端2个半月后，开始做的。那时正好学完jQuery，看了一半的高程。
  
 下载GitHub上已完成该任务的一位前辈的代码，本想模仿学习，可是他用的模块化开发，那时的我根本看不懂。因此只能将他的作品当做ui效果，用jQuery去实现。这是第一次做比较复杂的项目，一开始根本不知道怎么下手，慢慢完成一部分，一部分。半个月既然给完成。独立开发完成，这项目给了我很大的成就感。
@@ -21,6 +27,8 @@
 - [x] 编辑页和编辑保存页中相同的方法分出来，有利于维护
 - [x] 使用font awesome增强用户体验
 - [x] 模块化开发，使用webpack工具进行打包优化
+- [x] 加入tooltip,鼠标放在查看数据页上的饼图，可以看到相应的比例
+
  ---
 ### 疑问
 - 照着[webpack2.x开发实践](https://zhuanlan.zhihu.com/p/26645496)
