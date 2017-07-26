@@ -34,21 +34,20 @@
 - 照着[webpack2.x开发实践](https://zhuanlan.zhihu.com/p/26645496)
 实现的webpack多页面开发的配置。自己使用一些插件时总是报错。
 - webpack打包生成的网页，会出现内容无样式闪烁。还不知道问题出在哪里，该怎么弄。
+  - Google发现使用extract-text-webpack-plugin应该可以解决，忙于找工作，安定下来在来解决。
 ---
 ### 小技巧
-- 手机测试电脑上网页效果
+##### 1、手机测试电脑上网页效果
+- 在chrome浏览器上下载一个草料二维码插件 ；
+-  再用node.js建立本地服务器。
+    - npm install anywhere -g  安装anywhere
+    - 找到你想搭建服务器的路径，然后在当前路径下输入： anywhere 8860
+    - 浏览器就自动打开本地访问网址，一个简单的node服务器就OK了。
 
-    先下载一个草料二维码插件，下载地址 http://cli.im/news/6527 ，
-    下载好了就安装在chrome浏览器上。
-    再用node.js建立本地服务器。
+服务器和二维码插件安装好了，就可以用你的手机浏览器扫描服务器上的html文件，就可以用手机看电脑上的页面效果了
 
-    node.js 建立本地服务器具体流程和 方法:
-    1、先下载安装node.js 下载地址 https://nodejs.org/en/ 无脑点击安装、下一步就好了，安装好了 就进行下面第二步
-    2、用Node.js 建立本地服务器方法步骤 http://jingyan.baidu.com/article/19020a0a02ff67529c28425f.html?qqpfto=pcqq.discussion
-    服务器和二维码插件安装好了，就可以用你的手机扫描服务器上的html文件，
-    用手机看电脑上的页面效果，杠杠的
+参考：http://www.imooc.com/wenda/detail/340507
 
-    来源：http://www.imooc.com/wenda/detail/340507
 
 
 

@@ -180,8 +180,12 @@ const config ={
             }
 		}),
         // new ExtractTextPlugin("style.css"),
-        new ExtractTextPlugin('[name]/styles.[chunkhash].css')
-
+        //new ExtractTextPlugin('[name]/styles.[chunkhash].css')
+        new ExtractTextPlugin({
+            filename: "css/[name].css?[hash]-[chunkhash]-[contenthash]-[name]",
+            disable: false,
+            allChunks: true
+        }),
         //在每次构建前清理 /dist 文件夹
         //new CleanWebpackPlugin(['dist']),
 
