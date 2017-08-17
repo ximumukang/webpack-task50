@@ -30,7 +30,7 @@
 - [x] 使用font awesome增强用户体验
 - [x] 模块化开发，使用webpack工具进行打包优化
 - [x] 加入tooltip,鼠标放在查看数据页上的饼图，可以看到相应的比例
-- [x] 使用ExtractTextWebpackPlugin，不在出现无内容样式闪烁
+- [x] 使用ExtractTextWebpackPlugin，不在出现内容无样式闪烁
 - [ ] 使用postcss 增加兼容性
 
  ---
