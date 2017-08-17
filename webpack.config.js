@@ -11,6 +11,10 @@ const BUILD_PATH = path.resolve(ROOT_PATH,'dist');
 //Template的文件夹路径
 const TEM_PATH = path.resolve(ROOT_PATH,'templates');
 
+// 创建多个实例
+const extractCSS = new ExtractTextPlugin('stylesheets/[name]-one.css');
+const extractSCSS = new ExtractTextPlugin('stylesheets/[name]-two.css');
+
 const config ={
 	entry:{
 		//6个入口文件
@@ -37,46 +41,29 @@ const config ={
 	module:{
 		rules:[
 
-			{
+/*			{
 				test:/\.s?css$/,
 				use:[
 					'style-loader',
 					'css-loader',
 					'sass-loader'
 				],
-				/*
+				/!*
 				include:[
 					path.resolve(ROOT_PATH,'src/css')
 				]
-				*/
-			},
-
-			/*
-			
+				*!/
+			},*/
             {
                 test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                fallback: "style-loader",
-                use: "css-loader"
-                })
-            },*/
-            /*
-			{
-                test: /\.css$/,
-                use: extractCSS.extract([ 'css-loader', 'postcss-loader' ])
+                use: extractCSS.extract([ 'css-loader' ])
             },
+
             {
                 test: /\.scss$/i,
-                use: extractLESS.extract([ 'css-loader', 'sass-loader' ])
+                use: extractSCSS.extract([ 'css-loader', 'sass-loader' ])
             },
 
-            {
-                test: /\.(scss|css)$/,
-                use: ExtractTextPlugin.extract({
-                    use: ["css-loader", "sass-loader", "postcss-loader"]
-                })
-            },
-            */
             {
             	test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
 				use: 'url-loader?limit=50000&name=[path][name].[ext]'
@@ -118,9 +105,8 @@ const config ={
 
 	//添加插件，会自动生成5个HTML文件
 	plugins :[
-       /* extractCSS,
-       extractLESS,
-        */
+        extractCSS,
+       extractSCSS,
 
 		//创建了五个HtmlWebpackPlugin的实例，生成五个页面
 		new HtmlwebpackPlugin({
@@ -187,7 +173,7 @@ const config ={
             allChunks: true
         }),
         //在每次构建前清理 /dist 文件夹
-        //new CleanWebpackPlugin(['dist']),
+        new CleanWebpackPlugin(['dist']),
 
 	]
 };

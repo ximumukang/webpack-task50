@@ -3,6 +3,7 @@
  */
 import $ from 'jquery';
 import { Modal } from './modal.js';
+import '../css/common/Font-Awesome-3.2.1/css/font-awesome.min.css'
 
 export function init() {
     //渲染初始元素

@@ -4,7 +4,9 @@
   git clone https://github.com/ximumukang/webpack-task50.git
   cd webpack-task50
   npm install
-  npm run start/build
+  npm run start   // http://localhost:8888/index.html上访问
+  npm run build   // dist文件夹查看效果
+
   ```
 ---
 该项目是自学前端2个半月后，开始做的。那时正好学完jQuery，看了一半的高程。
@@ -28,6 +30,8 @@
 - [x] 使用font awesome增强用户体验
 - [x] 模块化开发，使用webpack工具进行打包优化
 - [x] 加入tooltip,鼠标放在查看数据页上的饼图，可以看到相应的比例
+- [x] 使用ExtractTextWebpackPlugin，不在出现无内容样式闪烁
+- [ ] 使用postcss 增加兼容性
 
  ---
 ### 疑问
