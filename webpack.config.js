@@ -102,7 +102,7 @@ const config ={
 			}
 		]
 	},
-
+    devtool: 'inline-source-map',
 	//添加插件，会自动生成5个HTML文件
 	plugins :[
         extractCSS,
