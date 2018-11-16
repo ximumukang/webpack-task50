@@ -38,7 +38,7 @@
 - 照着[webpack2.x开发实践](https://zhuanlan.zhihu.com/p/26645496)
 实现的webpack多页面开发的配置。自己使用一些插件时总是报错。
 - webpack打包生成的网页，会出现内容无样式闪烁。还不知道问题出在哪里，该怎么弄。
-  - Google发现使用extract-text-webpack-plugin应该可以解决，忙于找工作，安定下来在来解决。
+  - Google发现使用extract-text-webpack-plugin应该可以解决，忙于找工作，安定下来在来解决。<已解决>
 ---
 ### 小技巧
 ##### 1、手机测试电脑上网页效果
